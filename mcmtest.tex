@@ -219,14 +219,20 @@
   \paragraph{Analysis of result} \
   
   To examine the effectiveness of our PTPs, for each ``user'' we generate a series of alternative tour plans using a randomized algorithm. We calculate the total satisfaction score for each tour plan, including the PTPs-recommended one and the randomized ones. We find out that the tour plan PTPs generates has great advantages in comparison to other plans, that is to say, has the highest satisfaction score among the plans. \par
-  For further discussion, we calculate the satisfaction scores (fitness values) under different $t_{max}$, and visualize the result in figure \ref{fig:sstt}.
+  For further discussion, we calculate the satisfaction scores (fitness values) under different $t_{max}$, and visualize the result in figure \ref{fig:sstt}. \par
   \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{popularity.png}
     \caption{Relationship between satisfaction score and traffic time limit.}
     \label{fig:sstt}
   \end{figure}
-
+  We then set different duration (days) of tour and respectively calculate the total satisfaction score $Sat$. Figure \ref{fig:satscore} shows the relationship between $Sat$ and tour duration. \par
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{satscore.png}
+    \caption{$Sat$-tour duration relationship}
+    \label{fig:satscore}
+  \end{figure}
 
 
 

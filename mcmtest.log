@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.9.17)  2 FEB 2018 22:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.9.17)  2 FEB 2018 23:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -904,42 +904,48 @@ Package pdftex.def Info: ./figures/popularity.png  used on input line 225. on i
 nput line 225.
 Package pdftex.def Info: Requested size: 483.69687pt x 270.89742pt on input lin
 e 225.
+<./figures/satscore.png, id=214, 578.16pt x 433.62pt>
+File: ./figures/satscore.png Graphic file (type png)
+<use ./figures/satscore.png>
+Package pdftex.def Info: ./figures/satscore.png  used on input line 232. on inp
+ut line 232.
+Package pdftex.def Info: Requested size: 483.69687pt x 362.76945pt on input lin
+e 232.
  [8 <./figures/model2.jpg>] (./mcmtest.bbl [9 <./figures/popularity.png>])
-[10]
-<./figures/ad.png, id=243, 1284.8pt x 633.36626pt>
+[10 <./figures/satscore.png>]
+<./figures/ad.png, id=247, 1284.8pt x 633.36626pt>
 File: ./figures/ad.png Graphic file (type png)
 <use ./figures/ad.png>
-Package pdftex.def Info: ./figures/ad.png  used on input line 264. on input lin
-e 264.
+Package pdftex.def Info: ./figures/ad.png  used on input line 270. on input lin
+e 270.
 Package pdftex.def Info: Requested size: 483.69687pt x 238.4492pt on input line
- 264.
-<./figures/cwg.png, id=244, 811.03pt x 390.45876pt>
+ 270.
+<./figures/cwg.png, id=248, 811.03pt x 390.45876pt>
 File: ./figures/cwg.png Graphic file (type png)
 <use ./figures/cwg.png>
-Package pdftex.def Info: ./figures/cwg.png  used on input line 272. on input li
-ne 272.
+Package pdftex.def Info: ./figures/cwg.png  used on input line 278. on input li
+ne 278.
 Package pdftex.def Info: Requested size: 483.69687pt x 232.87694pt on input lin
-e 272.
+e 278.
  [11 <./figures/ad.png (PNG copy)> <./figures/cwg.png>]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 283.
-
-
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 289.
+ 
 AED: lastpage setting LastPage
 [12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 291.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 291.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 297.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 297.
  (./mcmtest.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 291.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 291.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 297.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 297.
 Package rerunfilecheck Info: File `mcmtest.out' has not changed.
-(rerunfilecheck)             Checksum: D1741FBAFFC17DE7FA9212D6DE169176;1400.
+(rerunfilecheck)             Checksum: 073CDC09520DE67CD11B6E30526C439D;1400.
  ) 
 Here is how much of TeX's memory you used:
- 12961 strings out of 492990
- 190471 string characters out of 6133079
- 432471 words of memory out of 5000000
- 16123 multiletter control sequences out of 15000+600000
+ 12968 strings out of 492990
+ 190621 string characters out of 6133079
+ 432536 words of memory out of 5000000
+ 16128 multiletter control sequences out of 15000+600000
  36544 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,21n,94p,921b,459s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -956,10 +962,10 @@ urw/helvetic/uhvr8a.pfb><d:/ProgramData/TexLive/texmf-dist/fonts/type1/urw/pala
 tino/uplb8a.pfb><d:/ProgramData/TexLive/texmf-dist/fonts/type1/urw/palatino/upl
 r8a.pfb><d:/ProgramData/TexLive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb
 ><d:/ProgramData/TexLive/texmf-dist/fonts/type1/public/esvect/vect10.pfb>
-Output written on mcmtest.pdf (13 pages, 2238839 bytes).
+Output written on mcmtest.pdf (13 pages, 2262501 bytes).
 PDF statistics:
- 319 PDF objects out of 1000 (max. 8388607)
- 279 compressed objects within 3 object streams
- 70 named destinations out of 1000 (max. 500000)
- 217 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 323 PDF objects out of 1000 (max. 8388607)
+ 281 compressed objects within 3 object streams
+ 71 named destinations out of 1000 (max. 500000)
+ 222 words of extra memory for PDF output out of 10000 (max. 10000000)
 
