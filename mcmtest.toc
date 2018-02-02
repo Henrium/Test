@@ -1,0 +1,29 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Background}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Restatement of problem}{2}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Literature review}{2}{subsection.1.3}
+\contentsline {section}{\numberline {2}Assumptions}{3}{section.2}
+\contentsline {section}{\numberline {3}Nomenclature}{3}{section.3}
+\contentsline {section}{\numberline {4}Model \uppercase {i\relax }: Personalized Tour Planning System (PTPs)}{4}{section.4}
+\contentsline {subsection}{\numberline {4.1}Rate the POIs: Evaluation Model}{4}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Construction of the graph}{4}{subsection.4.2}
+\contentsline {paragraph}{Data acquirement}{4}{section*.3}
+\contentsline {paragraph}{Construct the graph}{5}{section*.4}
+\contentsline {subsection}{\numberline {4.3}Plan the Tour Route}{6}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Restaurant \& Hotel Recommendation}{6}{subsection.4.4}
+\contentsline {paragraph}{Restaurants}{7}{section*.7}
+\contentsline {paragraph}{Hotels}{7}{section*.8}
+\contentsline {section}{\numberline {5}Model \uppercase {ii\relax }: PTPs with Super POIs}{7}{section.5}
+\contentsline {section}{\numberline {6}Inplementation}{7}{section.6}
+\contentsline {subsection}{\numberline {6.1}Data}{7}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Analysis \& Results}{8}{subsection.6.2}
+\contentsline {paragraph}{Tour plan}{8}{section*.10}
+\contentsline {paragraph}{Analysis of result}{8}{section*.11}
+\contentsline {section}{\numberline {7}Further Discussion}{9}{section.7}
+\contentsline {section}{\numberline {8}Model Analysis}{9}{section.8}
+\contentsline {subsection}{\numberline {8.1}Sensitivity Analysis}{9}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Strengths \& Weaknesses}{9}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.2.1}Strengths}{9}{subsubsection.8.2.1}
+\contentsline {subsubsection}{\numberline {8.2.2}Weaknesses}{9}{subsubsection.8.2.2}
+\contentsline {section}{\numberline {9}Conclusion}{9}{section.9}
+\contentsline {section}{Appendices}{11}{section*.16}
