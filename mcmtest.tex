@@ -218,10 +218,15 @@
   We simulate some ``users'' and input their requests (available time, preference of POIs, etc.) to our PTPs and generate personalized tour plans for them. 
   \paragraph{Analysis of result} \
   
-  To examine the effectiveness of our PTPs, for each ``user'' we generate a series of alternative tour plans using a randomized algorithm. We calculate the total satisfaction score for each tour plan, including the PTPs-recommended one and the randomized ones. We find out that the tour plan PTPs generates has great advantages in comparison to other plans, that is to say, has the highest satisfaction score among the plans.
+  To examine the effectiveness of our PTPs, for each ``user'' we generate a series of alternative tour plans using a randomized algorithm. We calculate the total satisfaction score for each tour plan, including the PTPs-recommended one and the randomized ones. We find out that the tour plan PTPs generates has great advantages in comparison to other plans, that is to say, has the highest satisfaction score among the plans. \par
+  For further discussion, we calculate the satisfaction scores (fitness values) under different $t_{max}$, and visualize the result\ref{fig:sstt}.
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{popularity.png}
+    \caption{Relationship between satisfaction score and traffic time limit.}
+    \label{fig:sstt}
+  \end{figure}
 
-
-\section{Further Discussion}   %最佳旅游体验？
 
 
 
