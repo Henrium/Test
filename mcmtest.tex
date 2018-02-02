@@ -102,7 +102,7 @@
 
 
 \section{Model \RNum{1}: Personalized Tour Planning System (PTPs)} \label{section:model1}
-  In this section, we will discuss our models. Before diving into details, briefly explain the whole idea\ref{fig:model}. Firstly, we give each spot a score based on its popularity and closeness to user's preference. Then we construct a graph, containing scores, traffic time and tour duration. We apply a genetic algorithm to find a way maximizing the score under the constraints of time. Furthermore, we analysis the relation between final satisfaction score and some properties.
+  In this section, we will discuss our models. Before diving into details, briefly explain the whole idea (as figure \ref{fig:model} shows). Firstly, we give each spot a score based on its popularity and closeness to user's preference. Then we construct a graph, containing scores, traffic time and tour duration. We apply a genetic algorithm to find a way maximizing the score under the constraints of time. Furthermore, we analysis the relation between final satisfaction score and some properties.
   \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{model.jpg}
@@ -143,7 +143,7 @@
   We estimate the speed of each kind of transportation, and with the distance between spots $d$ assigned, we can calculate the traffic time taken between each two spots. \par
   \paragraph{Construct the graph} 
 
-  With the datas prepared, we construct a weighted directed graph(\ref{fig:graph}), of which the nodes are spots. Every node is weighted by its score, and has touring duration as another property. The edge, which denotes road between the two spots it connects, is weighted by the traffic time.
+  With the datas prepared, we construct a weighted directed graph (figure \ref{fig:graph}), of which the nodes are spots. Every node is weighted by its score, and has touring duration as another property. The edge, which denotes road between the two spots it connects, is weighted by the traffic time.
   \begin{figure}[ht]
     \centering
     \includegraphics[width=0.6\textwidth]{graph.jpg}
@@ -153,7 +153,7 @@
 
 %%%%%%%%%%%GA===================================================================================================================
 \subsection{Plan the Tour Route}
-  With all the spots rated and a weighted graph constructed, we apply a genetic algorithm\ref{fig:ga} with non-linear constraints to generate a near-optimal route:
+  With all the spots rated and a weighted graph constructed, we apply a genetic algorithm (as figure \ref{fig:ga} shows) with non-linear constraints to generate a near-optimal route:
   \begin{alignat}{2}   %遗传算法
     \max~\sum_{i=1}^{n}Sat(s_{i})~(fitness function)\\
     \mbox{s.t.}\quad
@@ -189,7 +189,7 @@
   As stated in \ref{section:assumption}, the tourist stay in the same hotel during the whole tour. In our model, we first list the spots in the first day's schedule, and select from the hotels economically suitable in a 500m-radius-circle around each spot. The hotel with best popularity among those selected ones will be our recommendation.
 
 \section{Model \RNum{2}: PTPs with Super POIs} \label{section:model2}
-  In \ref{section:model1}, we regard the POIs as points without shape, inner structure and volume. For the Super POIs, inner information should be take into consideration, therefore we revise our model\ref{fig:model2}. To begin with, we evaluate the POIs and generate a optimal route using PTPs model. Then we transform each super POI to a weighted graph, in which the nodes are gates and subspots to view. Each subspot has a tour duration as its property. \par
+  In \ref{section:model1}, we regard the POIs as points without shape, inner structure and volume. For the Super POIs, inner information should be take into consideration, therefore we revise our model (figure \ref{fig:model2}). To begin with, we evaluate the POIs and generate a optimal route using PTPs model. Then we transform each super POI to a weighted graph, in which the nodes are gates and subspots to view. Each subspot has a tour duration as its property. \par
   \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{model2.jpg}
@@ -219,7 +219,7 @@
   \paragraph{Analysis of result} \
   
   To examine the effectiveness of our PTPs, for each ``user'' we generate a series of alternative tour plans using a randomized algorithm. We calculate the total satisfaction score for each tour plan, including the PTPs-recommended one and the randomized ones. We find out that the tour plan PTPs generates has great advantages in comparison to other plans, that is to say, has the highest satisfaction score among the plans. \par
-  For further discussion, we calculate the satisfaction scores (fitness values) under different $t_{max}$, and visualize the result\ref{fig:sstt}.
+  For further discussion, we calculate the satisfaction scores (fitness values) under different $t_{max}$, and visualize the result in figure \ref{fig:sstt}.
   \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{popularity.png}
