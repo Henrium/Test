@@ -30,7 +30,7 @@
 \date{\today}
 \begin{abstract}
     When travelling in a new city, it is important but challenging to choose Points of Interests (POIs) to visit and design the route. The quality of a tour is highly dependent on tour planning. However, planning a tour takes much time and effort. \par
-  To free the tourist from tour planning, our paper provides a personalized tour planning system (PTPs), which can offer the user a tour plan based on his/her preference, budget and time constraint. Moreover, we revise our PTPs to deal with ``super POIs'', namely, ones whose scale and structure can not be omitted. \par
+  To free the tourist from tour planning, our paper provides a personalized tour planning system (PTPs), which can offer the user a tour plan based on his/her preference, budget and time constraint. Moreover, we revise our PTPs to deal with ``super POIs'', namely, ones whose scale and structure cannot be omitted. \par
   We first set up a criterion to characterize each POI's type and popularity. Then we build our PTPs model and examine its effectiveness by applying it to New York City (NYC).\par
   PTPs consists of three sub-models: Evaluation Model, Route Planning Model, and Hotel \& Restaurant Recommendation Model. There is a figure showing the connection between all parts.\par
   Evaluation Model gives each POI a ``satisfaction score''. It measures the closeness between the type of a POI and the user's preference, meanwhile considers the POI's popularity, and produce a score to describe how satisfactory a POI is for the user.\par
@@ -69,7 +69,7 @@
     \item \textbf{Social-based recommendation,} which applies users' relationship in social media.
   \end{itemize}
   Besides, in other works, factors such as distance\cite{Zhang2017GeoPMF}, user interests\cite{Qingxia2016Personalized}, and popularity\cite{li2016personalized} are taken into consideration. However, some of these methods are dependent on a large amount of historical datas, therefore have difficulties in cold-start. Moreover, datas on travelling are sparse, and getting these datas from users might be viewed as an invasion of privacy. \par
-  There is also study on travelling route planning\cite{hao2015intellegent}. The majority of current works need users to input the origin and destination of travelling, and can not deal with accommodation arrangement, which limits their application. Therefore, we combine spot recommendation and route planning in our model, and get rid of reliance on historical datas.
+  There is also study on travelling route planning\cite{hao2015intellegent}. The majority of current works need users to input the origin and destination of travelling, and cannot deal with accommodation arrangement, which limits their application. Therefore, we combine spot recommendation and route planning in our model, and get rid of reliance on historical datas.
 
   
 
@@ -153,7 +153,7 @@
 
 %%%%%%%%%%%GA===================================================================================================================
 \subsection{Plan the Tour Route}
-  With all the spots rated and a weighted graph constructed, we apply a genetic algorithm (as figure \ref{fig:ga} shows) with non-linear constraints to generate a near-optimal route:
+  With all the spots rated and a weighted graph constructed, we apply a non-linear programming to design the route. Since the exact optimum is hard to reach, we use genetic algorithm (as figure \ref{fig:ga} shows) with non-linear constraints to generate a near-optimal route:
   \begin{alignat}{2}   %遗传算法
     \max~\sum_{i=1}^{n}Sat(s_{i})~(fitness function)\\
     \mbox{s.t.}\quad
@@ -215,7 +215,13 @@
 \subsection{Analysis \& Results}
   \paragraph{Tour plan} \
   
-  We simulate some ``users'' and input their requests (available time, preference of POIs, etc.) to our PTPs and generate personalized tour plans for them. 
+  We simulate some ``users'' and input their requests (available time, preference of POIs, etc.) to our PTPs and generate personalized tour plans for them. FIgure \ref{fig:route} shows the plan of route.
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{route.png}
+    \caption{The personalized tour route PTPs generates.}
+    \label{fig:route}
+  \end{figure}
   \paragraph{Analysis of result} \
   
   To examine the effectiveness of our PTPs, for each ``user'' we generate a series of alternative tour plans using a randomized algorithm. We calculate the total satisfaction score for each tour plan, including the PTPs-recommended one and the randomized ones. We find out that the tour plan PTPs generates has great advantages in comparison to other plans, that is to say, has the highest satisfaction score among the plans. \par
