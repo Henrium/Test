@@ -51,7 +51,7 @@
 \section{Introduction}	
 \subsection{Background}
   Travelling to another city is a delightful experience for most people. There are so many places of interest to visit, such as museums, parks and so on. With limited time, tourists have to choose among those places and design their own route. Therefore, tour planning is a important task for tourists. However, it takes a lot of time and massive information to make a perfect plan, and several constraints(e.g. cost, transportation time, etc.) should be considered.
-  \begin{figure}[ht]
+  \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{shanghai1.jpg}
     \caption{View of a city.}
@@ -105,7 +105,7 @@
 
 \section{Model \RNum{1}: Personalized Tour Planning System (PTPs)} \label{section:model1}
   In this section, we will discuss our models. Before diving into details, briefly explain the whole idea (as figure \ref{fig:model} shows). Firstly, we give each spot a score based on its popularity and conformity with user's preference. Then we construct a graph, containing scores, traffic time and tour duration. We apply a genetic algorithm to find a way maximizing the score under the constraints of time. Furthermore, we analysis the relation between final satisfactory score and some properties.
-  \begin{figure}[ht]
+  \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{model.jpg}
     \caption{Overview of Personalized Tour Planning System}
@@ -146,7 +146,7 @@
   \paragraph{Construct the graph} 
 
   With the datas prepared, we construct a weighted directed graph (figure \ref{fig:graph}), of which the nodes are spots. Every node is weighted by its score, and has touring duration as another property. The edge, which denotes road between the two spots it connects, is weighted by the traffic time.
-  \begin{figure}[ht]
+  \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\textwidth]{graph.jpg}
     \caption{Structure of Weighted Graph Model}
@@ -167,7 +167,7 @@
     \item $s_{i}$ is the $i^{th}$ spot, $i=1,2,\ldots,n$, $n$ is the total amount of spots;
     \item $t_{max}$ is the longest total travelling time duration that the tourist can accept.
   \end{itemize}
-  \begin{figure}[ht]
+  \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\textwidth]{ga.jpg}
     \caption{Sketch of genetic algorithm}
@@ -184,11 +184,17 @@
   Then we seek for restaurants that suits the constraints in a circle with $s_{k}$ as center and a radius of 500 meters (might be adjusted due to the user's preference). With the similar method we apply in rating the spots, we give each restaurant a score according to its category, popularity and the user's preference. The one with highest score is what we recommend to the user.
   \paragraph{Hotels}\
   
-  As stated in \ref{section:assumption}, the tourist stay in the same hotel during the whole tour. In our model, we first list the spots in the first day's schedule, and select from the hotels economically suitable in a 500m-radius-circle around each spot. The hotel with best popularity among those selected ones will be our recommendation.
+  As stated in \ref{section:assumption}, the tourist stay in the same hotel during the whole tour. In our model, we first list the spots in the first day's schedule, and select from the hotels economically suitable in a 500m-radius-circle around each spot. The hotel with best popularity among those selected ones will be our recommendation. Figure \ref{fig:hotel} shows the method we use to select hotels.
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{hotel.png}
+    \caption{Selection of hotels.}
+    \label{fig:hotel}
+  \end{figure}
 
 \section{Model \RNum{2}: PTPs with Super POIs} \label{section:model2}
   In \ref{section:model1}, we regard the POIs as points without shape, inner structure and volume. For the Super POIs, inner information should be take into consideration, therefore we revise our model (figure \ref{fig:model2}). To begin with, we evaluate the POIs and generate a optimal route using PTPs model. Then we transform each super POI to a weighted graph, in which the nodes are gates and subspots to view. Each subspot has a tour duration as its property. \par
-  \begin{figure}[ht]
+  \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{model2.jpg}
     \caption{Overview of the revised model}
@@ -201,7 +207,7 @@
 
 
 \section{Inplementation}
-  To test our PTPs model, we first apply it to New York City (NYC). Using the information we gathered, we apply the models and design a tour plan in NYC.
+  To test our PTPs model, we first apply it to New York City (NYC). We Using the information we gathered, we apply the models and design a tour plan in NYC.
 \subsection{Data}
   Because there is no existing dataset about NYC's POIs, in this paper we ourselves analyze many datas from reliable sources and experiment with them. We acquire a list of POIs in NYC from the \emph{Trip Advisor} website\cite{TripAdv}. Then we gather detailed information from Google's Places API Web Service\cite{GMaps}, including:
   \begin{itemize}
@@ -212,7 +218,7 @@
   Applying the methods mentioned in \ref{section:model1}, we get the distance between each two POIs in NYC, and each spot's price and satisfactory score. 
 \subsection{Analysis \& Results}
   \paragraph{Tour plan} \
-  For the spots in NYC, we define five categories to classify each spot:
+  For the spots in NYC, we define five categories to classify each spot: \par
   \begin{itemize}
     \item Architectural building
     \item Landmark
@@ -221,22 +227,22 @@
     \item Church
   \end{itemize}
   %========================================================================================================================
-  We simulate some ``users'' and input their requests (available time, preference of POIs, etc.) to our PTPs and generate personalized tour plans for them. For example, a hypothetical user inputs a preference $\vv{prf} = [2,3,1,4,5]$, which means he/she prefers historical sites and churches most among all spots. Figure \ref{fig:route1} shows the route generated by PTPs.
-  \begin{figure}[ht]
+  We simulate some ``users'' and input their requests (available time, preference of POIs, etc.) to our PTPs and generate personalized tour plans for them. For example, a hypothetical user inputs a preference $\vv{prf} = [2,3,1,4,5]$, which means he/she prefers historical sites and churches most among all spots. Figure \ref{fig:route1} shows the route generated by PTPs.\par
+  \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\textwidth]{route1.png}
     \caption{PTPs-generated tour route.}
     \label{fig:route1}
   \end{figure}
-  Another hypothetical user (who is enthusiastic about statues and architectures) inputs a preference $\vv{prf} = [4, 1, 5, 3, 2]$. Many statues and monuments are in Central Park, which is a super POI, so the tour plan includes an inner route in Central Park. The tour plan PTPs offers is presented in table\ref{fig:table}.
-  \begin{figure}[ht]
+  Another hypothetical user (who is enthusiastic about statues and architectures) inputs a preference $\vv{prf} = [4, 1, 5, 3, 2]$. Many statues and monuments are in Central Park, which is a super POI, so the tour plan includes an inner route in Central Park. The tour plan PTPs offers is presented in table \ref{fig:table}.
+  \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{tourplan.png}
     \caption{Tour plan for the hypothetical user}
     \label{fig:table}
   \end{figure}
   As we can see from the table, most of spots recommended are monuments and statues. And although the hypothetical user is not so interested in landmarks, the tour plan includes a visit to Empire State Building, because it is too popular to miss. Figure \ref{fig:route} shows the plan of route in a visable way.
-  \begin{figure}[ht]
+  \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{route.png}
     \caption{Tour route with a super POI.}
@@ -246,14 +252,14 @@
   
   To examine the effectiveness of our PTPs, for each ``user'' we generate a series of alternative tour plans using a randomized algorithm. We calculate the total satisfactory score for each tour plan, including the PTPs-recommended one and the randomized ones. We find out that the tour plan PTPs generates has great advantages in comparison to other plans, that is to say, has the highest satisfactory score among the plans. \par
   For further discussion, we calculate the satisfactory scores (fitness values) under different $t_{max}$, and visualize the result in figure \ref{fig:sstt}. \par
-  \begin{figure}[ht]
+  \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{popularity.png}
     \caption{Relationship between satisfactory score and traffic time limit.}
     \label{fig:sstt}
   \end{figure}
   We then set different duration (days) of tour and respectively calculate the total satisfactory score $Sat$. Figure \ref{fig:satscore} shows the relationship between $Sat$ and tour duration. \par
-  \begin{figure}[H]
+  \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{satscore.png}
     \caption{$Sat$-tour duration relationship}
@@ -291,7 +297,7 @@
 
 \newpage
 \section*{Get FREE from Tour Planning!}
-  \begin{figure}[ht]
+  \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{ad.png}
   \end{figure}
@@ -299,7 +305,7 @@ Want to explore a new city? Hard to decide where to go? \par
 Ooooh, a tour should be relaxed. Don't let tour planning burden you! \par
   \centering
 Why not experience the convenience \emph{Where to GO} provides!\par
-  \begin{figure}[ht]
+  \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{cwg.png}
   \end{figure}
