@@ -31,13 +31,11 @@
 \begin{abstract}
     When travelling in a new city, it is important but challenging to choose Points of Interests (POIs) to visit and design the route. The quality of a tour is highly dependent on tour planning. However, planning a tour takes much time and effort. \par
   To free the tourist from tour planning, our paper provides a personalized tour planning system (PTPs), which can offer the user a tour plan based on his/her preference, budget and time constraint. Moreover, we revise our PTPs to deal with ``super POIs'', namely, ones whose scale and structure cannot be omitted. \par
-  We first set up a criterion to characterize each POI's type and popularity. Then we build our PTPs model and examine its effectiveness by applying it to New York City (NYC).\par
-  PTPs consists of three sub-models: Evaluation Model, Route Planning Model, and Hotel \& Restaurant Recommendation Model. There is a figure showing the connection between all parts.\par
+  We first set up a criterion to characterize each POI's type and popularity. Then we build our PTPs model. PTPs consists of three sub-models: Evaluation Model, Route Planning Model, and Hotel \& Restaurant Recommendation Model. There is a figure showing the connection between all parts.\par
   Evaluation Model gives each POI a ``satisfactory score''. It measures the closeness between the type of a POI and the user's preference, meanwhile considers the POI's popularity, and produce a score to describe how satisfactory a POI is for the user.\par
-  Route Planning Model generates an optimal touring route under the constraints of time and budget. We apply a genetic algorithm to find a route with highest total satisfactory score. \par
-  Hotel \& Restaurant Recommendation Model 
-
-  To acquire the data we need, 
+  Route Planning Model generates an optimal touring route under the constraints of time and budget. We apply a genetic algorithm to find a route with highest total satisfactory score. Hotel \& Restaurant Recommendation Model produces recommendation of hotels and restaurants based on the touring route. \par
+  Remarkably, we examine our model in practice. We use PTPs to plan personalized tour routes for hypothetical users based on real data and ``there'' preference. To acquire the data we need, we surveyed the literature and online sources. \par
+  Finally, we make a sensitivity analysis and discuss the strengths \& weaknesses of our model.
 	\begin{keywords}
     tour planning, POI selection, route design, tourist satisfaction
 	\end{keywords}
@@ -102,31 +100,45 @@
     \bottomrule
   \end{tabular}
 
-
 \section{Model \RNum{1}: Personalized Tour Planning System (PTPs)} \label{section:model1}
-  In this section, we will discuss our models. Before diving into details, briefly explain the whole idea (as figure \ref{fig:model} shows). Firstly, we give each spot a score based on its popularity and conformity with user's preference. Then we construct a graph, containing scores, traffic time and tour duration. We apply a genetic algorithm to find a way maximizing the score under the constraints of time. Furthermore, we analysis the relation between final satisfactory score and some properties.
-  \begin{figure}[h]
+  In this section, we will discuss our first models, PTPs. PTPs consists of three submodels (as figure \ref{fig:model} shows). Firstly, we design the Evaluation Model(EM) to give each spot a score based on its popularity and conformity with user's preference. Then we construct the Route Planning Model(RPM) to decide tourists's spot plan in the first day.  RPM applies Genetic Algorithm to maximize the Satisfactory Score under constraints of time. Furthermore, we device the Restaurant and Hotel Recommendation Model(RHRM) to decide tourists' hotels and restaurants. Finally, we run the RPM repeatedly to derive each days' tour plan.
+  \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{model.jpg}
     \caption{Overview of Personalized Tour Planning System}
     \label{fig:model}
   \end{figure}
 \subsection{Rate the POIs: Evaluation Model}
-  We define a series of dimensions to classify the POIs(e.g. landmark, museum, historical site, etc.) A spot is assigned a value ranging from 0 to 1 for each dimension. Thus we build a category vector $\vv{cat} = [r_{1}, r_{2}, \ldots, r_{n}]$, where $r_{i}$ denotes the rate of $i^{th}$ category, to classify each spot. Through a user inerface, the user is asked to input the following values:
+  We use the popularity of POIs and their conformity with tourists' preference to mearsure their Satisfactory Score.
+  
+\subsubsection{Populalrity}
+  
+  To quantitify each POI's popularity $Pop$, we acquire the data of each spots' searching volume $v(s_i)$ . We normalize the datas using a linear mapping, in which the maximum and minimum are converted to 1 and 0 respectively. 
+  \[
+  	Pop(s_i) = \frac{v(s_i) - v_{min}}{v_{max} - v_{min}}
+  \]
+
+\subsubsection{Conformity}
+
+  We define a series of dimensions to classify the POIs(e.g. landmark, museum, historical site, etc.) A spot is assigned a value ranging from 0 to 1 for each dimension. Thus we build a category vector $\vv{cat} = [r_{1}, r_{2}, \ldots, r_{n}]$, where $r_{i}$ denotes the rate of $i^{th}$ category, to classify each spot. Through a user interface, users are asked to input the following values:
   \begin{itemize}
-    \item His/her ``interest rate'' to each category of POI;
+    \item Their ``interest rate'' to each category of POI;
     \item Total travelling time limit;
     \item Highest budget acceptable.
   \end{itemize}
-  We normalize the data, thus getting the user's preference vector $\vv{prf}$, which is a unit vector. Then the rate of user's interest to a certain spot() can be calculated: 
+  
+  We normalize the data, thus getting the user's preference vector $\vv{prf}$, which is a unit vector. Then the rate of user's interest to a certain spot $s_i$ can be calculated: 
   \[
-    Intr(s1) = cos<\vv{cat}(s1),\vv{prf}>
+    Intr(s_i) = cos<\vv{cat}(s_i),\vv{prf}>
   \]
-  To quantitify the each POI's popularity $Pop$, we acquire the datas of search volume and rating. We normalize the datas using a linear mapping, in which the maximum and minimum are converted to 1 and 0, respectively. Then we calculate the POI's satisfactory score by the following fomula:
+
+\subsubsection{Satisfactory Score}
+  
+  we calculate the POI's satisfactory score by the following fomula:
   \[
-    Sat = \alpha Intr + (1-\alpha)Pop
+    Sat(s_i) = \alpha Intr(s_i) + (1-\alpha)Pop(s_i)
   \]
-  where $\alpha$ is a positive weighting coefficient.
+  where $\alpha$ is a positive weighting coefficient depicting how much the Satisfactory Score depends on tourists' conformity with spots.
 
 \subsection{Construction of the graph}
   \paragraph{Data acquirement} \
