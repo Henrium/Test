@@ -21,12 +21,6 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{Cicerali2017Linking}
-E.~E. Cicerali, L.~K. Cicerali, and A.~Saldamlı, ``Linking
-  psycho-environmental comfort factors to tourist satisfaction levels:
-  Application of a psychology theory to tourism research,'' \emph{Journal of
-  Hospitality Marketing \& Management}, no.~8, 2017.
-
 \bibitem{wen2014survey}
 Y.~Wen, Y.~Shi, G.~Cai, Y.~Miao, and G.~Long, ``A survey of personalized travel
   recommendation,'' \emph{Computer Science}, no. Z11, 2014.
@@ -55,6 +49,12 @@ Q.~Li, W.~Xu, and H.~Jiang, ``Personalized recommendation for traveling
 B.~Hao, Y.~Tan, W.~Wang, and J.~Jia, ``Intellegent tourism route planning
   system based on ant colony optimization,'' \emph{Journal of Jinggangshan
   University (Natural Science)}, no.~1, pp. 8--13, 2015.
+
+\bibitem{Cicerali2017Linking}
+E.~E. Cicerali, L.~K. Cicerali, and A.~Saldamlı, ``Linking
+  psycho-environmental comfort factors to tourist satisfaction levels:
+  Application of a psychology theory to tourism research,'' \emph{Journal of
+  Hospitality Marketing \& Management}, no.~8, 2017.
 
 \bibitem{TripAdv}
 \BIBentryALTinterwordspacing
