@@ -48,17 +48,14 @@
 
 \section{Introduction}	
 \subsection{Background}
-  Travelling to another city is a delightful experience for most people. There are so many places of interest to visit, such as museums, parks and so on. With limited time, tourists have to choose among those places and design their own route. Therefore, tour planning is a important task for tourists. However, it takes a lot of time and massive information to make a perfect plan, and several constraints(e.g. cost, transportation time, etc.) should be considered.
+  Travelling to another city is a delightful experience for most people. There are so many places of interest to visit, such as museums, parks and so on. With limited time, tourists have to choose among those places and design their own route. Therefore, tour planning is an important task for tourists. However, it takes a lot of time and massive information to make a perfect plan, and several constraints(e.g. cost, transportation time, etc.) should be considered.
   \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{shanghai1.jpg}
     \caption{View of a city.}
     \label{fig:city}
   \end{figure}
-\subsection{Restatement of problem}
-  As required by the question, we are supposed to determine a tour route among Points of Interests (POIs), which include spots, hotels and restaurants. The route we provide should cover the popular POIs, meanwhile cater for the user's personal preference, namely, maximize the user's satisfaction\cite{Cicerali2017Linking}, and meet the constraints. \par
-  Furthermore, for ``super POIs'' (those with large scales) we should consider their inner structures, positions of entrances and exits and give a more subtle tour plan.
-\subsection{Literature review}
+\subsection{Literature Review}
   Existing study on tourism products recommendation applies one of the following four methods\cite{wen2014survey}:
   \begin{itemize}
     \item \textbf{Content-based recommendation,} which recommends tourism products similar to products chosen by the user.
@@ -68,6 +65,9 @@
   \end{itemize}
   Besides, in other works, factors such as distance\cite{Zhang2017GeoPMF}, user interests\cite{Qingxia2016Personalized}, and popularity\cite{li2016personalized} are taken into consideration. However, some of these methods are dependent on a large amount of historical datas, therefore have difficulties in cold-start. Moreover, datas on travelling are sparse, and getting these datas from users might be viewed as an invasion of privacy. \par
   There is also study on travelling route planning\cite{hao2015intellegent}. The majority of current works need users to input the origin and destination of travelling, and cannot deal with accommodation arrangement, which limits their application. Therefore, we combine spot recommendation and route planning in our model, and get rid of reliance on historical datas.
+\subsection{Our Work}
+  As required by the question, we are supposed to determine a tour route among Points of Interests (POIs), which include spots, hotels and restaurants. The route we provide should cover the popular POIs, meanwhile cater for the user's personal preference, namely, maximize the user's satisfaction\cite{Cicerali2017Linking}, and meet the constraints. \par
+  Furthermore, for ``super POIs'' (those with large scales) we should consider their inner structures, positions of entrances and exits and give a more subtle tour plan.
 
   
 
