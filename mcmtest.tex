@@ -33,13 +33,13 @@
   To free the tourist from tour planning, our paper provides a personalized tour planning system (PTPs), which can offer the user a tour plan based on his/her preference, budget and time constraint. Moreover, we revise our PTPs to deal with ``super POIs'', namely, ones whose scale and structure cannot be omitted. \par
   We first set up a criterion to characterize each POI's type and popularity. Then we build our PTPs model and examine its effectiveness by applying it to New York City (NYC).\par
   PTPs consists of three sub-models: Evaluation Model, Route Planning Model, and Hotel \& Restaurant Recommendation Model. There is a figure showing the connection between all parts.\par
-  Evaluation Model gives each POI a ``satisfaction score''. It measures the closeness between the type of a POI and the user's preference, meanwhile considers the POI's popularity, and produce a score to describe how satisfactory a POI is for the user.\par
-  Route Planning Model generates an optimal touring route under the constraints of time and budget. We apply a genetic algorithm to find a route with highest total satisfaction score. \par
+  Evaluation Model gives each POI a ``satisfactory score''. It measures the closeness between the type of a POI and the user's preference, meanwhile considers the POI's popularity, and produce a score to describe how satisfactory a POI is for the user.\par
+  Route Planning Model generates an optimal touring route under the constraints of time and budget. We apply a genetic algorithm to find a route with highest total satisfactory score. \par
   Hotel \& Restaurant Recommendation Model 
 
   To acquire the data we need, 
 	\begin{keywords}
-    tour planning, route design, 
+    tour planning, POI selection, route design, tourist satisfaction
 	\end{keywords}
 \end{abstract}
 
@@ -58,7 +58,7 @@
     \label{fig:city}
   \end{figure}
 \subsection{Restatement of problem}
-  As required by the question, we are supposed to determine a tour route among Points of Interests (POIs), which include spots, hotels and restaurants. The route we provide should cover the popular POIs, meanwhile cater for the user's personal preference, namely, maximize the user's satisfaction, and meet the constraints. \par
+  As required by the question, we are supposed to determine a tour route among Points of Interests (POIs), which include spots, hotels and restaurants. The route we provide should cover the popular POIs, meanwhile cater for the user's personal preference, namely, maximize the user's satisfaction\cite{Cicerali2017Linking}, and meet the constraints. \par
   Furthermore, for ``super POIs'' (those with large scales) we should consider their inner structures, positions of entrances and exits and give a more subtle tour plan.
 \subsection{Literature review}
   Existing study on tourism products recommendation applies one of the following four methods\cite{wen2014survey}:
@@ -76,12 +76,14 @@
 \section{Assumptions}\label{section:assumption}
   To simplify the real life situation, we will make the following assumptions at the start of constructing our models.
   \begin{itemize}
-    \item \textbf{Sightseeing is more important than accommodation.} User's preference of spots are considered in higher priority than restaurants and hotels. 
-    \item \textbf{We further assume that a tourist always stays in the same hotel during a trip.} The user doesn't have to bother carrying.
-    \item \textbf{User's satisfaction on POIs solely depends on his/her preference and the popularity,} while the impact of other factors(e.g. mood, weather, etc.) is neglected. Because the quality of POIs is vague and subjective, thus hard to quantitify, we assume that generally the more popular a POI is, the higher quality it is of.
-    \item \textbf{Road between any two spots is straight, and its length is approximately equal to the great-circle distance.}
-    \item \textbf{Ticket and traffic fares are ignorable compared to prices of hotels and restaurants.} Therefore, the cost of visiting a spot and travelling between spots can be viewed as zero.
-    \item \textbf{The spots' scales are relatively small,} including super POIs. In the scale of the city, a super POI can still be viewed as a point. In the scale of a super POI, the subspots in it can be viewed as points. Therefore, the time taken moving from one spot to another within a super POI is ignorable.
+    \item \textbf{Sightseeing is in higher priorty than accommodation and meals.} Meals can spread all over the world, but spots can't. Therefore, the most significant embodiment of cities' characteristic are their spots. As a result, we consider sightseeing as the most important activity during a trip. 
+    %\item \textbf{A tourist stays in different hotel in every day during a trip.} Generally,  tourists don't carry much luggage during their trips. Thus, they tend to change hotels near their trip's end positions for convinence everyday.
+    %\item \textbf{Tourists' satisfaction on POIs solely measured by their preference and the popularity of POIs.} while the impact of other factors(e.g. mood, weather, etc.) is neglected. Because the quality of POIs is vague and subjective, thus hard to quantitify, we assume that generally the more popular a POI is, the higher quality it is of.
+    \item \textbf{The popularity of POIs can totally reflects their quality.} Thus we only use the popularity of POIs and their conformity with tourists' preference to mearsure their Satisfactory Score.
+    \item \textbf{Entrance tickets and traffic fares are ignorable compared to expenses of hotels and restaurants.} Entrance tickets and traffic fares are usually very cheap in comparison with expenses of hotels and restaurants. We view the cost of visiting a spot and transportation between POIs as zero.
+    \item \textbf{Road distance between any two POIs are proportional to their great-circle distance.} Calculating accurate road distance requires extremely large quantity of data, and is unnecessary for tour planning. Therefore, we ignore specific road distribution in cities.
+    \item \textbf{Speeds of each transportation methods are identical in every roads in a city repectively.} We ignore specific traffic volume distribution of time and roads. Because they also require large quantity of data and are not important for tour planning.
+    \item \textbf{POIs in the scale of cities and subspots in the scale of spots are points without structures and volumes.}
   \end{itemize}
 
 
@@ -102,7 +104,7 @@
 
 
 \section{Model \RNum{1}: Personalized Tour Planning System (PTPs)} \label{section:model1}
-  In this section, we will discuss our models. Before diving into details, briefly explain the whole idea (as figure \ref{fig:model} shows). Firstly, we give each spot a score based on its popularity and closeness to user's preference. Then we construct a graph, containing scores, traffic time and tour duration. We apply a genetic algorithm to find a way maximizing the score under the constraints of time. Furthermore, we analysis the relation between final satisfaction score and some properties.
+  In this section, we will discuss our models. Before diving into details, briefly explain the whole idea (as figure \ref{fig:model} shows). Firstly, we give each spot a score based on its popularity and conformity with user's preference. Then we construct a graph, containing scores, traffic time and tour duration. We apply a genetic algorithm to find a way maximizing the score under the constraints of time. Furthermore, we analysis the relation between final satisfactory score and some properties.
   \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{model.jpg}
@@ -120,7 +122,7 @@
   \[
     Intr(s1) = cos<\vv{cat}(s1),\vv{prf}>
   \]
-  To quantitify the each POI's popularity $Pop$, we acquire the datas of search volume and rating. We normalize the datas using a linear mapping, in which the maximum and minimum are converted to 1 and 0, respectively. Then we calculate the POI's satisfaction score by the following fomula:
+  To quantitify the each POI's popularity $Pop$, we acquire the datas of search volume and rating. We normalize the datas using a linear mapping, in which the maximum and minimum are converted to 1 and 0, respectively. Then we calculate the POI's satisfactory score by the following fomula:
   \[
     Sat = \alpha Intr + (1-\alpha)Pop
   \]
@@ -172,11 +174,7 @@
     \label{fig:ga}
   \end{figure}
   we use path coding method, represent a path starting from spot $s_{k0}$ via $s_{k1}, s_{k2},\ldots,s_{km}$ with $k0-k1-\cdots-km$. Applying the \emph{ga} funtion in MATLAB, we find out a near-optimal route and the corresponding value of fitness function.
-  %To find out the optimal tour route is an OP problem\cite{Gionis2014Customized}. We first set the spot with highest score as the origin and destination of all routes, and generate all possible routes which suit the constraint of time. Then, for each potential route, we sum up the scores of all spots it contains, thus the routs are rated. The route scoring highest is chosen as the recommended route for the first day. For other days, the same operation is applied among spots the user hasn't been to. 
-
-  
-
-
+ 
 
 \subsection{Restaurant \& Hotel Recommendation}
   After providing a route to travel around spots, we work on ways to recommend hotels and restaurant to consummate our tour planning system. Since hotels and restaurants are different in many ways, we use different methods in recommendation.
@@ -196,7 +194,7 @@
     \caption{Overview of the revised model}
     \label{fig:model2}
   \end{figure}
-  In the tour route generated, each super POI has two adjacent nodes (two spots). We select two gates with least distance to the adjacent nodes and decide the entrance and exit according to the tour direction. After the selection of gates is done, we design the tour route inside the super POI. Using the evaluation model we give each subspot a satisfaction score. And because the traffic time between subspots is ignorable, we just need to maximize the total satisfaction score under the constraint of time. \par
+  In the tour route generated, each super POI has two adjacent nodes (two spots). We select two gates with least distance to the adjacent nodes and decide the entrance and exit according to the tour direction. After the selection of gates is done, we design the tour route inside the super POI. Using the evaluation model we give each subspot a satisfactory score. And because the traffic time between subspots is ignorable, we just need to maximize the total satisfactory score under the constraint of time. \par
   To choose among all subspots in a super POI, we apply a greedy algorithm: Pick the highest-scored subspot, and then pick the highest-scored one from the left ones $\cdots$ until total tour duration reaches the time limit. Planning a route to tour around the chosen subspots starting from the entrance and ending at the exit is a travelling salesman problem (TSP).
 
 
@@ -211,11 +209,26 @@
     \item The ticket price of each POI;
     \item Search volume and public rate of each POI.
   \end{itemize}
-  Applying the methods mentioned in \ref{section:model1}, we get the distance between each two POIs in NYC, and each spot's price and satisfaction score. 
+  Applying the methods mentioned in \ref{section:model1}, we get the distance between each two POIs in NYC, and each spot's price and satisfactory score. 
 \subsection{Analysis \& Results}
   \paragraph{Tour plan} \
-  
-  We simulate some ``users'' and input their requests (available time, preference of POIs, etc.) to our PTPs and generate personalized tour plans for them. FIgure \ref{fig:route} shows the plan of route.
+  For the spots in NYC, we define five categories to classify each spot:
+  \begin{itemize}
+    \item Architectural building
+    \item Landmark
+    \item Monument / statue
+    \item Historical site
+    \item Church
+  \end{itemize}
+  %========================================================================================================================
+  We simulate some ``users'' and input their requests (available time, preference of POIs, etc.) to our PTPs and generate personalized tour plans for them. For example, a hypothetical user (who is enthusiastic about history and statues) inputs a preference $\vv{prf}$ = $[3, 1, 4, 5, 2]$. The tour plan PTPs offers is presented in table\ref{fig:table}.
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{tourplan.png}
+    \caption{Tour plan for the hypothetical user}
+    \label{fig:table}
+  \end{figure}
+  As we can see from the table, most of spots recommended are monuments and statues. And although the hypothetical user is not so interested in landmarks, the tour plan includes a visit to Empire State Building, because it is too popular to miss. Figure \ref{fig:route} shows the plan of route in a visable way.
   \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{route.png}
@@ -224,15 +237,15 @@
   \end{figure}
   \paragraph{Analysis of result} \
   
-  To examine the effectiveness of our PTPs, for each ``user'' we generate a series of alternative tour plans using a randomized algorithm. We calculate the total satisfaction score for each tour plan, including the PTPs-recommended one and the randomized ones. We find out that the tour plan PTPs generates has great advantages in comparison to other plans, that is to say, has the highest satisfaction score among the plans. \par
-  For further discussion, we calculate the satisfaction scores (fitness values) under different $t_{max}$, and visualize the result in figure \ref{fig:sstt}. \par
+  To examine the effectiveness of our PTPs, for each ``user'' we generate a series of alternative tour plans using a randomized algorithm. We calculate the total satisfactory score for each tour plan, including the PTPs-recommended one and the randomized ones. We find out that the tour plan PTPs generates has great advantages in comparison to other plans, that is to say, has the highest satisfactory score among the plans. \par
+  For further discussion, we calculate the satisfactory scores (fitness values) under different $t_{max}$, and visualize the result in figure \ref{fig:sstt}. \par
   \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{popularity.png}
-    \caption{Relationship between satisfaction score and traffic time limit.}
+    \caption{Relationship between satisfactory score and traffic time limit.}
     \label{fig:sstt}
   \end{figure}
-  We then set different duration (days) of tour and respectively calculate the total satisfaction score $Sat$. Figure \ref{fig:satscore} shows the relationship between $Sat$ and tour duration. \par
+  We then set different duration (days) of tour and respectively calculate the total satisfactory score $Sat$. Figure \ref{fig:satscore} shows the relationship between $Sat$ and tour duration. \par
   \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{satscore.png}
@@ -255,9 +268,9 @@
   \end{enumerate}
 \subsubsection{Weaknesses}
   \begin{enumerate}
+    \item Roads between POIs are simplified to spherical lines, while real roads can include detours, slopes and even bridges across rivers.
     \item Complex traffic conditions in cities are omitted. We simplify the traffic network to weighted graph. However, in the real condition there are much more factors influencing the traffic time.
     \item Tourist's satisfaction is assumed only related to his/her interest and the POI's popularity. The impact of complex subjective and emotional factors during the tour are not considered.
-    \item 
   \end{enumerate}
 
 \section{Conclusion}

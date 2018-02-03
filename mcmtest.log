@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.9.17)  3 FEB 2018 00:09
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2017.9.17)  3 FEB 2018 10:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -300,10 +300,10 @@ Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 (d:/ProgramData/TexLive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package color Info: Driver file: pdftex.def on input line 147.
+Package color Info: Driver file: xetex.def on input line 147.
 
-(d:/ProgramData/TexLive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
+(d:/ProgramData/TexLive/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
 ))
 \everycr=\toks37
 \minrowclearance=\skip73
@@ -360,6 +360,11 @@ Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 (d:/ProgramData/TexLive/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+)
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 105.
+
+(d:/ProgramData/TexLive/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ))
 (d:/ProgramData/TexLive/texmf-dist/tex/latex/bera/berasans.sty
 Package: berasans 2004/01/30 (WaS)
@@ -391,9 +396,10 @@ Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
+Package pdftexcmds Info: \pdfdraftmode not found.
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
 Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
@@ -459,17 +465,32 @@ LaTeX Info: Redefining \pageref on input line 6432.
 \c@Hfootnote=\count136
 )
 
-Package hyperref Message: Driver (autodetected): hpdftex.
+Package hyperref Message: Driver (autodetected): hxetex.
 
-(d:/ProgramData/TexLive/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
-\Fld@listcount=\count137
-\c@bookmark@seq@number=\count138
+(d:/ProgramData/TexLive/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2017/03/14 v6.85a Hyperref driver for XeTeX
+
+(d:/ProgramData/TexLive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2017/03/14 v6.85a Hyperref: PDF Unicode definition (HO)
+)
+(d:/ProgramData/TexLive/texmf-dist/tex/generic/oberdiek/stringenc.sty
+Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box36
+\c@Hy@AnnotLevel=\count137
+\HyField@AnnotCount=\count138
+\Fld@listcount=\count139
+\c@bookmark@seq@number=\count140
 
 (d:/ProgramData/TexLive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-82.
+Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
+(rerunfilecheck)             (e.g. pdfTeX or LuaTeX with package `pdftexcmds').
+
+(rerunfilecheck)             Therefore file contents cannot be checked efficien
+tly
+(rerunfilecheck)             and the loading of the package is aborted.
 )
 \Hy@SectionHShift=\skip74
 )
@@ -491,41 +512,20 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (d:/ProgramData/TexLive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: xetex.def on input line 99.
 )
 \Gin@req@height=\dimen153
 \Gin@req@width=\dimen154
 )
-(d:/ProgramData/TexLive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
-Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
-
-(d:/ProgramData/TexLive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(d:/ProgramData/TexLive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-)
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-
-(d:/ProgramData/TexLive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-)))
 (d:/ProgramData/TexLive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
 (d:/ProgramData/TexLive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Driver file: xetex.def on input line 225.
 LaTeX Info: Redefining \color on input line 709.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
@@ -534,7 +534,7 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-\c@Theorem=\count139
+\c@Theorem=\count141
 
 (d:/ProgramData/TexLive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -550,7 +550,7 @@ Package: mwe 2012/05/15 v0.3 Package to support minimal working examples (MWE)
 
 (d:/ProgramData/TexLive/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count140
+\c@lips@count=\count142
 )
 (d:/ProgramData/TexLive/texmf-dist/tex/latex/blindtext/blindtext.sty
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
@@ -558,24 +558,24 @@ Package: blindtext 2012/01/06 V2.0 blindtext-Package
 (d:/ProgramData/TexLive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count141
-\c@Blindtext=\count142
-\c@blind@countparstart=\count143
-\blind@countxx=\count144
-\blindtext@numBlindtext=\count145
-\blind@countyy=\count146
-\c@blindlist=\count147
-\c@blindlistlevel=\count148
-\c@blindlist@level=\count149
-\blind@listitem=\count150
-\c@blind@listcount=\count151
-\c@blind@levelcount=\count152
-\blind@mathformula=\count153
-\blind@Mathformula=\count154
-\c@blind@randomcount=\count155
-\c@blind@randommax=\count156
-\c@blind@pangramcount=\count157
-\c@blind@pangrammax=\count158
+\c@blindtext=\count143
+\c@Blindtext=\count144
+\c@blind@countparstart=\count145
+\blind@countxx=\count146
+\blindtext@numBlindtext=\count147
+\blind@countyy=\count148
+\c@blindlist=\count149
+\c@blindlistlevel=\count150
+\c@blindlist@level=\count151
+\blind@listitem=\count152
+\c@blind@listcount=\count153
+\c@blind@levelcount=\count154
+\blind@mathformula=\count155
+\blind@Mathformula=\count156
+\c@blind@randomcount=\count157
+\c@blind@randommax=\count158
+\c@blind@pangramcount=\count159
+\c@blind@pangrammax=\count160
 ))
 (d:/ProgramData/TexLive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
@@ -594,7 +594,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen160
 \caption@hangindent=\dimen161
 )
-\c@ContinuedFloat=\count159
+\c@ContinuedFloat=\count161
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
@@ -602,16 +602,16 @@ Package caption Info: longtable package is loaded.
 (d:/ProgramData/TexLive/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 ))
-\c@subfigure=\count160
-\c@subtable=\count161
+\c@subfigure=\count162
+\c@subtable=\count163
 )
 (d:/ProgramData/TexLive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count162
+\c@float@type=\count164
 \float@exts=\toks39
-\float@box=\box36
+\float@box=\box37
 \@float@everytoks=\toks40
-\@floatcapt=\box37
+\@floatcapt=\box38
 )
 (d:/ProgramData/TexLive/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
@@ -620,13 +620,16 @@ Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 Package: gensymb 2003/07/02 v1.0 (WaS)
 )
 (d:/ProgramData/TexLive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Invalid UTF-8 byte or sequence at line 284 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 299 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 550 replaced by U+FFFD.
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count163
+\c@AlgoLine=\count165
 \algocf@hangindent=\skip75
 
 (d:/ProgramData/TexLive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count164
+\c@checkoddpage=\count166
 )
 (d:/ProgramData/TexLive/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
@@ -646,26 +649,26 @@ Package: relsize 2013/03/29 ver 4.1
 \interspacealgoruled=\dimen166
 \interspacetitleboxruled=\dimen167
 \algocf@ruledwidth=\skip84
-\algocf@inoutbox=\box38
-\algocf@inputbox=\box39
+\algocf@inoutbox=\box39
+\algocf@inputbox=\box40
 \AlCapSkip=\skip85
 \AlCapHSkip=\skip86
 \algoskipindent=\skip87
-\algocf@nlbox=\box40
-\algocf@hangingbox=\box41
-\algocf@untilbox=\box42
+\algocf@nlbox=\box41
+\algocf@hangingbox=\box42
+\algocf@untilbox=\box43
 \algocf@skipuntil=\skip88
-\algocf@capbox=\box43
+\algocf@capbox=\box44
 \algocf@lcaptionbox=\skip89
 \algoheightruledefault=\skip90
 \algoheightrule=\skip91
 \algotitleheightruledefault=\skip92
 \algotitleheightrule=\skip93
-\c@algocfline=\count165
-\c@algocfproc=\count166
-\c@algocf=\count167
-\algocf@algoframe=\box44
-\algocf@algobox=\box45
+\c@algocfline=\count167
+\c@algocfproc=\count168
+\c@algocf=\count169
+\algocf@algoframe=\box45
+\algocf@algobox=\box46
 )
 (d:/ProgramData/TexLive/texmf-dist/tex/latex/esvect/esvect.sty
 Package: esvect 
@@ -686,11 +689,15 @@ LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Try loading font information for T1+ppl on input line 25.
  (d:/ProgramData/TexLive/texmf-dist/tex/latex/psnfss/t1ppl.fd
@@ -699,26 +706,12 @@ File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 25.
-\c@lstlisting=\count168
+\c@lstlisting=\count170
 
-(d:/ProgramData/TexLive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count169
-\scratchdimen=\dimen168
-\scratchbox=\box46
-\nofMPsegments=\count170
-\nofMParguments=\count171
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count172
-\MPscratchDim=\dimen169
-\MPnumerator=\count173
-\makeMPintoPDFobject=\count174
-\everyMPtoPDFconversion=\toks43
-)
 *geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
+*geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
+* driver: xetex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -757,7 +750,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (d:/ProgramData/TexLive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count175
+\c@section@level=\count171
 )
 LaTeX Info: Redefining \ref on input line 25.
 LaTeX Info: Redefining \pageref on input line 25.
@@ -819,31 +812,29 @@ Overfull \hbox (1.49757pt too wide) in paragraph at lines 46--46
 ute Plan-ning Model, and Ho-tel & Restau-
  []
 
+(d:/ProgramData/TexLive/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
+File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
+
+)
 [1
 
-{d:/ProgramData/TexLive/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+]
 LaTeX Font Info:    Try loading font information for T1+phv on input line 47.
-
-(d:/ProgramData/TexLive/texmf-dist/tex/latex/psnfss/t1phv.fd
+ (d:/ProgramData/TexLive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 47.
- (./mcmtest.toc)
+
+(./mcmtest.toc)
 \tf@toc=\write5
 \openout5 = `mcmtest.toc'.
 
-
-[1]
+ [1]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 52.
-<./figures/shanghai1.jpg, id=129, 1204.5pt x 760.8425pt>
-File: ./figures/shanghai1.jpg Graphic file (type jpg)
-<use ./figures/shanghai1.jpg>
-Package pdftex.def Info: ./figures/shanghai1.jpg  used on input line 56. on inp
-ut line 56.
-Package pdftex.def Info: Requested size: 483.69687pt x 305.53899pt on input lin
-e 56.
+File: ./figures/shanghai1.jpg Graphic file (type bmp)
+<./figures/shanghai1.jpg>
 
 Overfull \hbox (3.35886pt too wide) in paragraph at lines 64--66
 []\T1/ppl/m/n/10.95 Existing study on tourism prod-ucts rec-om-men-da-tion ap-p
@@ -856,124 +847,62 @@ File: omsppl.fd
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
- [2 <./figures/shanghai1.jpg>]
+ [2] [3]
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\uppercase' on input line 104.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 106.
 
-<./figures/model.jpg, id=145, 1297.2465pt x 413.1435pt>
-File: ./figures/model.jpg Graphic file (type jpg)
-<use ./figures/model.jpg>
-Package pdftex.def Info: ./figures/model.jpg  used on input line 108. on input 
-line 108.
-Package pdftex.def Info: Requested size: 483.69687pt x 154.04585pt on input lin
-e 108.
-[3] [4 <./figures/model.jpg>]
-<./figures/graph.jpg, id=170, 377.0085pt x 338.4645pt>
-File: ./figures/graph.jpg Graphic file (type jpg)
-<use ./figures/graph.jpg>
-Package pdftex.def Info: ./figures/graph.jpg  used on input line 149. on input 
-line 149.
-Package pdftex.def Info: Requested size: 290.22107pt x 260.55133pt on input lin
-e 149.
- [5 <./figures/graph.jpg>]
-<./figures/ga.jpg, id=180, 387.24675pt x 457.10776pt>
-File: ./figures/ga.jpg Graphic file (type jpg)
-<use ./figures/ga.jpg>
-Package pdftex.def Info: ./figures/ga.jpg  used on input line 170. on input lin
-e 170.
-Package pdftex.def Info: Requested size: 290.22107pt x 342.5998pt on input line
- 170.
- [6 <./figures/ga.jpg>]
+File: ./figures/model.jpg Graphic file (type bmp)
+<./figures/model.jpg>
+[4]
+File: ./figures/graph.jpg Graphic file (type bmp)
+<./figures/graph.jpg>
+File: ./figures/ga.jpg Graphic file (type bmp)
+<./figures/ga.jpg>
+ [5]
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\uppercase' on input line 191.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 189.
 
-<./figures/model2.jpg, id=195, 778.107pt x 565.51276pt>
-File: ./figures/model2.jpg Graphic file (type jpg)
-<use ./figures/model2.jpg>
-Package pdftex.def Info: ./figures/model2.jpg  used on input line 195. on input
- line 195.
-Package pdftex.def Info: Requested size: 483.69687pt x 351.54622pt on input lin
-e 195.
-[7]
-<./figures/route.png, id=211, 1071.00125pt x 631.35875pt>
-File: ./figures/route.png Graphic file (type png)
-<use ./figures/route.png>
-Package pdftex.def Info: ./figures/route.png  used on input line 221. on input 
-line 221.
-Package pdftex.def Info: Requested size: 483.69687pt x 285.13962pt on input lin
-e 221.
-<./figures/popularity.png, id=213, 806.5332pt x 451.6875pt>
-File: ./figures/popularity.png Graphic file (type png)
-<use ./figures/popularity.png>
-Package pdftex.def Info: ./figures/popularity.png  used on input line 231. on i
-nput line 231.
-Package pdftex.def Info: Requested size: 483.69687pt x 270.89742pt on input lin
-e 231.
-<./figures/satscore.png, id=216, 578.16pt x 433.62pt>
-File: ./figures/satscore.png Graphic file (type png)
-<use ./figures/satscore.png>
-Package pdftex.def Info: ./figures/satscore.png  used on input line 238. on inp
-ut line 238.
-Package pdftex.def Info: Requested size: 483.69687pt x 362.76945pt on input lin
-e 238.
- [8 <./figures/model2.jpg>] (./mcmtest.bbl [9 <./figures/route.png>])
-[10 <./figures/popularity.png>]
-<./figures/ad.png, id=249, 1284.8pt x 633.36626pt>
-File: ./figures/ad.png Graphic file (type png)
-<use ./figures/ad.png>
-Package pdftex.def Info: ./figures/ad.png  used on input line 276. on input lin
-e 276.
-Package pdftex.def Info: Requested size: 483.69687pt x 238.4492pt on input line
- 276.
-<./figures/cwg.png, id=250, 811.03pt x 390.45876pt>
-File: ./figures/cwg.png Graphic file (type png)
-<use ./figures/cwg.png>
-Package pdftex.def Info: ./figures/cwg.png  used on input line 284. on input li
-ne 284.
-Package pdftex.def Info: Requested size: 483.69687pt x 232.87694pt on input lin
-e 284.
- [11 <./figures/satscore.png>]
+File: ./figures/model2.jpg Graphic file (type bmp)
+<./figures/model2.jpg>
+[6] [7]
+File: ./figures/tourplan.png Graphic file (type bmp)
+<./figures/tourplan.png>
+File: ./figures/route.png Graphic file (type bmp)
+<./figures/route.png>
+ [8] [9]
+File: ./figures/popularity.png Graphic file (type bmp)
+<./figures/popularity.png>
+File: ./figures/satscore.png Graphic file (type bmp)
+<./figures/satscore.png>
+ [10] (./mcmtest.bbl
+Missing character: There is no ı in font pplr8t!
+ [11]) [12]
+File: ./figures/ad.png Graphic file (type bmp)
+<./figures/ad.png>
+File: ./figures/cwg.png Graphic file (type bmp)
+<./figures/cwg.png>
+ [13]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 295.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 308.
 
 
 AED: lastpage setting LastPage
-[12 <./figures/ad.png (PNG copy)> <./figures/cwg.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 303.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 303.
+[14]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 316.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 316.
  (./mcmtest.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 303.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 303.
-Package rerunfilecheck Info: File `mcmtest.out' has not changed.
-(rerunfilecheck)             Checksum: 24FDB79FF4FF1E90A348FEA8130E535B;1400.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 316.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 316.
  ) 
 Here is how much of TeX's memory you used:
- 12975 strings out of 492990
- 190753 string characters out of 6133079
- 432612 words of memory out of 5000000
- 16133 multiletter control sequences out of 15000+600000
- 36544 words of font info for 79 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 59i,21n,94p,921b,459s stack positions out of 5000i,500n,10000p,200000b,80000s
-{d:/ProgramData/TexLive/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/ProgramDat
-a/TexLive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/ProgramData/
-TexLive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/ProgramData/Te
-xLive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/ProgramData/TexLi
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/ProgramData/TexLive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/ProgramData/TexLive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/ProgramData/TexLive/texmf-
-dist/fonts/type1/public/rsfs/rsfs10.pfb><d:/ProgramData/TexLive/texmf-dist/font
-s/type1/urw/helvetic/uhvb8a.pfb><d:/ProgramData/TexLive/texmf-dist/fonts/type1/
-urw/helvetic/uhvr8a.pfb><d:/ProgramData/TexLive/texmf-dist/fonts/type1/urw/pala
-tino/uplb8a.pfb><d:/ProgramData/TexLive/texmf-dist/fonts/type1/urw/palatino/upl
-r8a.pfb><d:/ProgramData/TexLive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb
-><d:/ProgramData/TexLive/texmf-dist/fonts/type1/public/esvect/vect10.pfb>
-Output written on mcmtest.pdf (13 pages, 3823773 bytes).
-PDF statistics:
- 326 PDF objects out of 1000 (max. 8388607)
- 283 compressed objects within 3 object streams
- 72 named destinations out of 1000 (max. 500000)
- 227 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 15744 strings out of 492998
+ 226739 string characters out of 6134911
+ 460367 words of memory out of 5000000
+ 19396 multiletter control sequences out of 15000+600000
+ 31156 words of font info for 70 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 59i,21n,94p,903b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
 
+Output written on mcmtest.pdf (15 pages).
