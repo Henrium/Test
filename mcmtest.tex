@@ -33,11 +33,11 @@
   To free the tourist from tour planning, our paper provides a personalized tour planning system (PTPs), which can offer the user a tour plan based on his/her preference, budget and time constraint. Moreover, we revise our PTPs to deal with ``super POIs'', namely, ones whose scale and structure cannot be omitted. \par
   We first set up a criterion to characterize each POI's type and popularity. Then we build our PTPs model. PTPs consists of three sub-models: Evaluation Model, Route Planning Model, and Hotel \& Restaurant Recommendation Model. There is a figure showing the connection between all parts.\par
   Evaluation Model gives each POI a ``satisfactory score''. It measures the closeness between the type of a POI and the user's preference, meanwhile considers the POI's popularity, and produce a score to describe how satisfactory a POI is for the user.\par
-  Route Planning Model generates an optimal touring route under the constraints of time and budget. We apply a genetic algorithm to find a route with highest total satisfactory score. Hotel \& Restaurant Recommendation Model produces recommendation of hotels and restaurants based on the touring route. \par
+  Route Planning Model generates an optimal touring route under the constraints of time and budget. We implement a genetic algorithm (GA) to find a route with highest total satisfactory score. Hotel \& Restaurant Recommendation Model produces recommendation of hotels and restaurants based on the touring route. \par
   Remarkably, we examine our model in practice. We use PTPs to plan personalized tour routes for hypothetical users based on real data and ``there'' preference. To acquire the data we need, we surveyed the literature and online sources. \par
   Finally, we make a sensitivity analysis and discuss the strengths \& weaknesses of our model.
 	\begin{keywords}
-    tour planning, POI selection, route design, tourist satisfaction
+    tour planning, tourist satisfaction, non-linear programming, genetic algorithm
 	\end{keywords}
 \end{abstract}
 
@@ -101,7 +101,7 @@
   \end{tabular}
 
 \section{Model \RNum{1}: Personalized Tour Planning System (PTPs)} \label{section:model1}
-  In this section, we will discuss our first models, PTPs. PTPs consists of three submodels (as figure \ref{fig:model} shows). Firstly, we design the Evaluation Model(EM) to give each spot a score based on its popularity and conformity with user's preference. Then we construct the Route Planning Model(RPM) to decide tourists's spot plan in the first day.  RPM applies Genetic Algorithm to maximize the Satisfactory Score under constraints of time. Furthermore, we device the Restaurant and Hotel Recommendation Model(RHRM) to decide tourists' hotels and restaurants. Finally, we run the RPM repeatedly to derive each days' tour plan.
+  In this section, we will discuss our first models, PTPs. PTPs consists of three submodels (as figure \ref{fig:model} shows). Firstly, we design the Evaluation Model(EM) to give each spot a score based on its popularity and conformity with user's preference. Then we construct the Route Planning Model(RPM) to decide tourists's spot plan in the first day. RPM applies GA to maximize the Satisfactory Score under constraints of time. Furthermore, we device the Restaurant and Hotel Recommendation Model(RHRM) to decide tourists' hotels and restaurants. Finally, we run the RPM repeatedly to derive each days' tour plan.
   \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{model.jpg}
@@ -192,7 +192,7 @@
   After providing a route to travel around spots, we work on ways to recommend hotels and restaurant to consummate our tour planning system. Since hotels and restaurants are different in many ways, we use different methods in recommendation.
   \paragraph{Restaurants}\
   
-  From the route planning process, a travelling sequence $\mathscr{S} = [s_{1}, s_{2}, \ldots, s_{n}]$ is generated. We can also generate a sequence of starting times and ending times of touring the spots, $\mathscr{T} = [t_{1}, t_{2}, \ldots, t_{2n}]$. If we set a meal time(e.g. 12am for lunch and 6pm for supper), we can find a $t_{m}$ in $\mathscr{T}$ that is closest to the meal time, and find the corresponding $s_{k}$ of $t_{m}$. \par
+  From the route planning process, a travelling sequence $S = [s_{1}, s_{2}, \ldots, s_{n}]$ is generated. We can also generate a sequence of starting times and ending times of touring the spots, $T = [t_{1}, t_{2}, \ldots, t_{2n}]$. If we set a meal time(e.g. 12am for lunch and 6pm for supper), we can find a $t_{m}$ in $T$ that is closest to the meal time, and find the corresponding $s_{k}$ of $t_{m}$. \par
   Then we seek for restaurants that suits the constraints in a circle with $s_{k}$ as center and a radius of 500 meters (might be adjusted due to the user's preference). With the similar method we apply in rating the spots, we give each restaurant a score according to its category, popularity and the user's preference. The one with highest score is what we recommend to the user.
   \paragraph{Hotels}\
   
@@ -230,6 +230,7 @@
   Applying the methods mentioned in \ref{section:model1}, we get the distance between each two POIs in NYC, and each spot's price and satisfactory score. 
 \subsection{Analysis \& Results}
   \paragraph{Tour plan} \
+
   For the spots in NYC, we define five categories to classify each spot: \par
   \begin{itemize}
     \item Architectural building
@@ -262,7 +263,13 @@
   \end{figure}
   \paragraph{Analysis of result} \
   
-  To examine the effectiveness of our PTPs, for each ``user'' we generate a series of alternative tour plans using a randomized algorithm. We calculate the total satisfactory score for each tour plan, including the PTPs-recommended one and the randomized ones. We find out that the tour plan PTPs generates has great advantages in comparison to other plans, that is to say, has the highest satisfactory score among the plans. \par
+  To examine the effectiveness of our PTPs, for each ``user'' we generate a series of alternative tour plans using a randomized algorithm. We calculate the total satisfactory score for each tour plan, including the PTPs-recommended one and the randomized ones. We find out that the tour plan PTPs generates has great advantages in comparison to other plans, that is to say, has the highest satisfactory score among the plans. Figure \ref{fig:compare} shows PTPs route's advantages over randomized routes. \par
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{compare.png}
+    \caption{Comparison between randomized route to PTPs route}
+    \label{fig:compare}
+  \end{figure}
   For further discussion, we calculate the satisfactory scores (fitness values) under different $t_{max}$, and visualize the result in figure \ref{fig:sstt}. \par
   \begin{figure}[h]
     \centering
@@ -299,6 +306,8 @@
   \end{enumerate}
 
 \section{Conclusion}
+  Our paper provides a method to measure tourist's satisfaction based on the preference of tourist and popularity of points of interest (POIs). Then we propose our Personalized Tour Planning System. It gets input from the user, including preference of POIs, constraints of time and budget, and provides a tour plan that meets the user's satisfaction. Three submodels: Evaluation Model, Route Planning Model and Hotel \& Restaurant Recommendation Model, form the integrated PTPs model. \par
+  We use real data of New York City (NYC) to practice and examine our PTPs. For some hypothetical users, we evaluate POIs in NYC according to their conformity with the users' preference and implement GA to find a near-optimal tour route. The PTPs model is capable of dealing with super POIs, and route recommended by PTPs has great advantage in satisfaction score over other possible routes.
 
 
 
