@@ -18,11 +18,14 @@
 \contentsline {subsection}{\numberline {6.1}Data}{7}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}Analysis \& Results}{8}{subsection.6.2}
 \contentsline {paragraph}{Tour plan}{8}{section*.10}
-\contentsline {paragraph}{Analysis of result}{9}{section*.13}
-\contentsline {section}{\numberline {7}Model Analysis}{10}{section.7}
-\contentsline {subsection}{\numberline {7.1}Sensitivity Analysis}{10}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Strengths \& Weaknesses}{10}{subsection.7.2}
-\contentsline {subsubsection}{\numberline {7.2.1}Strengths}{10}{subsubsection.7.2.1}
+\contentsline {paragraph}{Analysis of result}{10}{section*.14}
+\contentsline {section}{\numberline {7}Model Analysis}{11}{section.7}
+\contentsline {subsection}{\numberline {7.1}Sensitivity Analysis}{11}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Strengths \& Weaknesses}{11}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}Strengths}{11}{subsubsection.7.2.1}
 \contentsline {subsubsection}{\numberline {7.2.2}Weaknesses}{11}{subsubsection.7.2.2}
-\contentsline {section}{\numberline {8}Conclusion}{11}{section.8}
-\contentsline {section}{Appendices}{14}{section*.20}
+\contentsline {section}{\numberline {8}Conclusion}{12}{section.8}
+\contentsline {section}{Appendices}{14}{section*.21}
+\contentsline {section}{Appendix \numberline {A}Implemented Genetic Algorithm}{14}{Appendix.a.A}
+\contentsline {section}{Appendix \numberline {B}Fitness Function}{14}{Appendix.a.B}
+\contentsline {section}{Appendix \numberline {C}Calculation of satisfactory score}{14}{Appendix.a.C}

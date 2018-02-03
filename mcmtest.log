@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2017.9.17)  3 FEB 2018 10:44
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2017.9.17)  3 FEB 2018 12:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -867,6 +867,8 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 File: ./figures/model2.jpg Graphic file (type bmp)
 <./figures/model2.jpg>
 [6] [7]
+File: ./figures/route1.png Graphic file (type bmp)
+<./figures/route1.png>
 File: ./figures/tourplan.png Graphic file (type bmp)
 <./figures/tourplan.png>
 File: ./figures/route.png Graphic file (type bmp)
@@ -885,24 +887,100 @@ File: ./figures/cwg.png Graphic file (type bmp)
 <./figures/cwg.png>
  [13]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 308.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 315.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 317.
+
+(d:/ProgramData/TexLive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) (./code/GA.m
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <9> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 1.
+
+Overfull \hbox (40.10846pt too wide) in paragraph at lines 27--28
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][] 
+ []
 
 
+Overfull \hbox (148.10956pt too wide) in paragraph at lines 30--31
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) (./code/fitness_func.m) (./code/load_data.m
+Invalid UTF-8 byte or sequence at line 2 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2 replaced by U+FFFD.
+Missing character: There is no � in font pcrr8t!
+Missing character: There is no ƫ in font pcrr8t!
+Missing character: There is no � in font pcrr8t!
+Missing character: There is no � in font pcrr8t!
+Missing character: There is no � in font pcrr8t!
+Invalid UTF-8 byte or sequence at line 3 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3 replaced by U+FFFD.
+Missing character: There is no � in font pcrr8t!
+Missing character: There is no � in font pcrr8t!
+Missing character: There is no ֱ in font pcrr8t!
+Missing character: There is no � in font pcrr8t!
+Missing character: There is no � in font pcrr8t!
+Missing character: There is no � in font pcrr8t!
+Invalid UTF-8 byte or sequence at line 4 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4 replaced by U+FFFD.
+Missing character: There is no � in font pcrr8t!
+Missing character: There is no � in font pcrr8t!
+Missing character: There is no ȶ in font pcrr8t!
+Missing character: There is no ȣ in font pcrr8t!
+Missing character: There is no � in font pcrr8t!
+Missing character: There is no � in font pcrr8t!
+Missing character: There is no � in font pcrr8t!
+Missing character: There is no � in font pcrr8t!
+Missing character: There is no � in font pcrr8t!
+Missing character: There is no � in font pcrr8t!
+Missing character: There is no � in font pcrr8t!
+Missing character: There is no � in font pcrr8t!
+Missing character: There is no � in font pcrr8t!
+Missing character: There is no � in font pcrr8t!
+
+Overfull \hbox (18.50824pt too wide) in paragraph at lines 11--12
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (34.7084pt too wide) in paragraph at lines 12--13
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[14]) 
 AED: lastpage setting LastPage
-[14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 316.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 316.
+[15]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 328.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 328.
  (./mcmtest.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 316.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 316.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 328.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 328.
  ) 
 Here is how much of TeX's memory you used:
- 15744 strings out of 492998
- 226739 string characters out of 6134911
- 460367 words of memory out of 5000000
- 19396 multiletter control sequences out of 15000+600000
- 31156 words of font info for 70 fonts, out of 8000000 for 9000
+ 16415 strings out of 492998
+ 234372 string characters out of 6134911
+ 531458 words of memory out of 5000000
+ 20050 multiletter control sequences out of 15000+600000
+ 32731 words of font info for 73 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 59i,21n,94p,903b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,21n,94p,903b,1834s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on mcmtest.pdf (15 pages).
+Output written on mcmtest.pdf (16 pages).
